@@ -1,7 +1,7 @@
 language: ruby
 rvm:
   - "2.1.2"
-before_script: bundle exec rake gems:install db:setup test
+before_script: bundle exec rake gems:install db:migrate db:setup test
 notifications:
   email:
     recipients:
