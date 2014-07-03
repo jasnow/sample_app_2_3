@@ -52,7 +52,7 @@ DEPENDENCIES
   faker
   i18n (= 0.5.0)
   iconv
-  rails (~> 2.3.18)
+  rails (= 2.3.18)
   rails-footnotes
   rake
   rspec

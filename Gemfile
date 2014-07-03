@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rake'
 
-gem 'rails', '~> 2.3.18', :require => nil
+gem 'rails', '2.3.18', :require => nil
 
 gem 'sqlite3', :require => 'sqlite3'
 
