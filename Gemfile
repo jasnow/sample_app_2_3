@@ -7,7 +7,7 @@ gem 'rails', '2.3.18', :require => nil
 gem 'sqlite3', :require => 'sqlite3'
 
 gem 'will_paginate', '2.3.16' # Don't use '3.x.x'
-gem 'i18n', '0.5.0' # last version to avoid warning
+gem 'i18n'
 gem 'iconv'
 gem 'faker'
 
