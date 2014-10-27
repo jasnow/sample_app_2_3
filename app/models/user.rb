@@ -41,7 +41,7 @@ class User < ActiveRecord::Base
   end
 
   def remember_me!
-    self.remember_token = encrypt("#{salt}--#{id}--#{Time.now.utc}")
+    self.remember_token = encrypt("#{salt}--#{id}--#{Time.zone.now.utc}")
     save_without_validation
   end
   
@@ -59,7 +59,7 @@ class User < ActiveRecord::Base
     end
 
     def make_salt
-      secure_hash("#{Time.now.utc}#{password}")
+      secure_hash("#{Time.zone.now.utc}#{password}")
     end
 
     def secure_hash(string)
