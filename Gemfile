@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'rake'
-
 gem 'rails', '2.3.18', :require => nil
+
+gem 'rake'
 
 gem 'sqlite3', :require => 'sqlite3'
 
