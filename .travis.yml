@@ -9,10 +9,11 @@ before_script:
   - bundle exec rake gems:install
   - bundle exec rake db:test:prepare
   - bundle exec rake test
-
+cache: bundler
 notifications:
   email:
     recipients:
     - jasnow@hotmail.com
     on_success: change
     on_failure: always
+sudo: false
