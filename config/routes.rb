@@ -1,12 +1,12 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :users
   map.resources :sessions, :only => [:new, :create, :destroy]
-  map.signin '/signin', :controller => 'sessions', :action => 'new' 
+  map.signin '/signin', :controller => 'sessions', :action => 'new'
   map.signout '/signout', :controller => 'sessions', :action => 'destroy'
 
   map.contact '/contact', :controller => 'pages', :action => 'contact'
   map.about   '/about',   :controller => 'pages', :action => 'about'
-  map.help    '/help',    :controller => 'pages', :action => 'help' 
+  map.help    '/help',    :controller => 'pages', :action => 'help'
   map.signup '/signup',   :controller => 'users', :action => 'new'
   map.root    :controller => 'pages', :action => 'home'
   # The priority is based upon order of creation: first created -> highest priority.
@@ -27,7 +27,7 @@ ActionController::Routing::Routes.draw do |map|
 
   # Sample resource route with sub-resources:
   #   map.resources :products, :has_many => [ :comments, :sales ], :has_one => :seller
-  
+
   # Sample resource route with more complex sub-resources
   #   map.resources :products do |products|
   #     products.resources :comments

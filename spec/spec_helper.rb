@@ -6,8 +6,8 @@ require 'spec/autorun'
 require 'spec/rails'
 require "webrat"
 Webrat.configure do |config|
-  config.mode = :rails 
-end 
+  config.mode = :rails
+end
 
 # Uncomment the next line to use webrat's matchers
 #require 'webrat/integrations/rspec-rails'
@@ -24,9 +24,9 @@ Spec::Runner.configure do |config|
   config.use_instantiated_fixtures  = false
   config.fixture_path = RAILS_ROOT + '/spec/fixtures/'
 
-  def test_sign_in(user) 
-    controller.current_user = user 
-  end 
+  def test_sign_in(user)
+    controller.current_user = user
+  end
 
 
   # == Fixtures

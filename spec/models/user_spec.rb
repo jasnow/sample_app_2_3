@@ -17,12 +17,12 @@ describe User do
   it "should require a name" do
     no_name_user = User.new(@valid_attributes.merge(:name => ""))
     no_name_user.should_not be_valid
-  end 
+  end
 
-  it "should require a name" do 
+  it "should require a name" do
     no_email_user = User.new(@valid_attributes.merge(:email => ""))
-    no_email_user.should_not be_valid 
-  end 
+    no_email_user.should_not be_valid
+  end
 
   it "should reject names that are too long" do
     long_name = "a" * 51
@@ -97,11 +97,11 @@ describe User do
 
       it "should be true if the passwords match" do
         @user.has_password?(@valid_attributes[:password]).should be_true
-      end    
+      end
 
       it "should be false if the passwords don't match" do
         @user.has_password?("invalid").should be_false
-      end 
+      end
     end
 
     describe "authenticate method" do

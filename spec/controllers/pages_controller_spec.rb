@@ -1,11 +1,11 @@
 require 'spec_helper'
 
-describe PagesController do 
+describe PagesController do
   integrate_views
 
   before(:each) do
-    @base_title = "Ruby on Rails Tutorial Sample App"                                                                                                                                                     
-  end 
+    @base_title = "Ruby on Rails Tutorial Sample App"
+  end
 
   describe "GET 'home'" do
     it "should be successful" do
@@ -24,9 +24,9 @@ describe PagesController do
   describe "Get 'about'" do
     it "should be successful" do
       get 'about'
-      response.should be_success 
-    end 
-  end 
+      response.should be_success
+    end
+  end
 
   it "should have the right title" do
     get 'home'

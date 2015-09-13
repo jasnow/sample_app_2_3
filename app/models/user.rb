@@ -44,14 +44,14 @@ class User < ActiveRecord::Base
     self.remember_token = encrypt("#{salt}--#{id}--#{Time.zone.now.utc}")
     save_without_validation
   end
-  
+
   private
 
     def encrypt_password
       unless password.nil?
         self.salt = make_salt
         self.encrypted_password = encrypt(password)
-      end 
+      end
     end
 
     def encrypt(string)
@@ -65,7 +65,7 @@ class User < ActiveRecord::Base
     def secure_hash(string)
       Digest::SHA2.hexdigest(string)
     end
-end 
+end
 
 
 

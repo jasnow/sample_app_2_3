@@ -7,7 +7,7 @@ describe "Users" do
     describe "failure" do
 
       it "should not make a new user" do
-        lambda do 
+        lambda do
           visit signup_path
           click_button
           response.should render_template('users/new')

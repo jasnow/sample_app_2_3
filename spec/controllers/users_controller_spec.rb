@@ -21,9 +21,9 @@ describe UsersController do
         third  = Factory(:user, :email => "another@example.net")
 
         @users = [@user, second, third]
-        30.times do 
-          @users << Factory(:user, :email => Factory.next(:email)) 
-        end 
+        30.times do
+          @users << Factory(:user, :email => Factory.next(:email))
+        end
         User.should_receive(:paginate).and_return(@users.paginate)
       end
 
@@ -54,15 +54,15 @@ describe UsersController do
   end
 
   describe "GET 'show'" do
-    before(:each) do 
-      @user = Factory(:user) 
+    before(:each) do
+      @user = Factory(:user)
       User.stub!(:find, @user.id).and_return(@user)
-    end 
+    end
 
-    it "should be successful" do 
-      get :show, :id => @user 
-      response.should be_success 
-    end 
+    it "should be successful" do
+      get :show, :id => @user
+      response.should be_success
+    end
 
     it "should have the right title" do
       get :show, :id => @user
@@ -79,7 +79,7 @@ describe UsersController do
     #      response.should have_tag("h2>img", :class => "gravatar")
     #    end
 
-  end 
+  end
 
   describe "GET 'new'" do
 
@@ -131,12 +131,12 @@ describe UsersController do
       it "should redirect to the user show page" do
         post :create, :user => @attr
         response.should redirect_to(user_path(@user))
-      end    
+      end
 
-      it "should sign the user in" do 
-        post :create, :user => @attr 
-        controller.should be_signed_in 
-      end 
+      it "should sign the user in" do
+        post :create, :user => @attr
+        controller.should be_signed_in
+      end
     end
 
 
@@ -280,7 +280,7 @@ describe UsersController do
 
       before(:each) do
         admin = Factory(:user, :email => "admin@example.com", :admin => true)
-        test_sign_in(admin)        
+        test_sign_in(admin)
         User.should_receive(:find).with(@user).and_return(@user)
         @user.should_receive(:destroy).and_return(@user)
       end

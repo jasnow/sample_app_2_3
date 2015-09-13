@@ -3,37 +3,37 @@ class UsersController < ApplicationController
   before_filter :correct_user, :only => [:edit, :update]
   before_filter :admin_user, :only => :destroy
 
-  def index 
+  def index
     @title = "All Users"
     @users = User.paginate(:page => params[:page])
-  end 
+  end
 
-  def show 
+  def show
     @user = User.find(params[:id])
     @title = @user.name
-  end 
+  end
 
   def new
     @title = "Sign up"
     @user = User.new
   end
 
-  def create 
+  def create
     @user = User.new(params[:user])
-    if @user.save 
+    if @user.save
       sign_in @user
       flash[:success] = "Welcome to the Sample App!"
       redirect_to @user
-    else 
+    else
       @title = "Sign up"
-      render 'new' 
-    end 
-  end 
+      render 'new'
+    end
+  end
 
-  def edit 
+  def edit
     @user = User.find(params[:id])
     @title = "Edit user"
-  end  
+  end
 
   def update
     # @user found in before_filter
@@ -46,27 +46,27 @@ class UsersController < ApplicationController
     end
   end
 
-  def destroy 
+  def destroy
     RAILS_DEFAULT_LOGGER.debug "destroy received params with id: " + (params[:id]).to_s
-    User.find(params[:id]).destroy 
+    User.find(params[:id]).destroy
     flash[:success] = "User destroyed."
-    redirect_to users_path 
-  end 
+    redirect_to users_path
+  end
 
-  private 
+  private
 
-  def authenticate 
-    deny_access unless signed_in? 
-  end 
+  def authenticate
+    deny_access unless signed_in?
+  end
 
-  def correct_user 
+  def correct_user
     @user = User.find(params[:id])
     redirect_to(root_path) unless current_user?(@user)
-  end 
+  end
 
-  def admin_user 
-    redirect_to(root_path) unless current_user && current_user.admin? 
-  end 
+  def admin_user
+    redirect_to(root_path) unless current_user && current_user.admin?
+  end
 end
 
 

@@ -1,18 +1,18 @@
 require 'spec_helper'
 
 describe "Layout links" do
-  def check_page_links(page)                                                                                                                                                                              
+  def check_page_links(page)
     visit page
     check_link("About", 'pages/about')
     check_link("Help", 'pages/help')
     check_link("Contact", 'pages/contact')
     check_link("Home", 'pages/home')
-  end 
+  end
 
   def check_link(link, template)
     click_link link
     response.should render_template(template)
-  end 
+  end
 
   it "should have a Home page at '/'" do
     get '/'
@@ -34,12 +34,12 @@ describe "Layout links" do
     response.should render_template('pages/help')
   end
 
-  it "should have a signup page at '/signup'" do 
-    get '/signup' 
+  it "should have a signup page at '/signup'" do
+    get '/signup'
     response.should render_template('users/new')
-  end 
+  end
 
-  it "should have the right links on the layout" do                                                                                                                                                       
+  it "should have the right links on the layout" do
     check_page_links(about_path)
   end
 
