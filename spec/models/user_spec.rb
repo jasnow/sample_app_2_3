@@ -57,7 +57,8 @@ describe User do
   describe "password validations" do
 
     it "should require a password" do
-      User.new(@valid_attributes.merge(:password => "", :password_confirmation => "")).
+      User.new(@valid_attributes.merge(:password => "",
+        :password_confirmation => "")).
         should_not be_valid
     end
 
@@ -68,13 +69,15 @@ describe User do
 
     it "should reject short passwords" do
       short = "a" * 5
-      hash = @valid_attributes.merge(:password => short, :password_confirmation => short)
+      hash = @valid_attributes.merge(:password => short,
+        :password_confirmation => short)
       User.new(hash).should_not be_valid
     end
 
     it "should reject long passwords" do
       long = "a" * 41
-      hash = @valid_attributes.merge(:password => long, :password_confirmation => long)
+      hash = @valid_attributes.merge(:password => long,
+        :password_confirmation => long)
       User.new(hash).should_not be_valid
     end
   end
@@ -107,17 +110,20 @@ describe User do
     describe "authenticate method" do
 
       it "should return nil on email/password mismatch" do
-        wrong_password_user = User.authenticate(@valid_attributes[:email], "wrongpass")
+        wrong_password_user = User.authenticate(@valid_attributes[:email],
+        "wrongpass")
         wrong_password_user.should be_nil
       end
 
       it "should return nil for an email address with no user" do
-        nonexistent_user = User.authenticate("bar@foo.com", @valid_attributes[:password])
+        nonexistent_user = User.authenticate("bar@foo.com",
+          @valid_attributes[:password])
         nonexistent_user.should be_nil
       end
 
       it "should return the user on email/password match" do
-        matching_user = User.authenticate(@valid_attributes[:email], @valid_attributes[:password])
+        matching_user = User.authenticate(@valid_attributes[:email],
+          @valid_attributes[:password])
         matching_user.should == @user
       end
     end

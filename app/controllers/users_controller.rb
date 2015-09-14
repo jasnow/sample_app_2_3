@@ -47,7 +47,8 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    RAILS_DEFAULT_LOGGER.debug "destroy received params with id: " + (params[:id]).to_s
+    RAILS_DEFAULT_LOGGER.debug "destroy received params with id: " +
+      (params[:id]).to_s
     User.find(params[:id]).destroy
     flash[:success] = "User destroyed."
     redirect_to users_path
