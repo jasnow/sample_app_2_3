@@ -1,14 +1,14 @@
 language: ruby
 rvm:
-  - 2.3.1
+- 2.3.1
 before_script:
-  - bundle exec rake db:drop:all
-  - bundle exec rake db:create
-  - bundle exec rake db:migrate
-  - bundle exec rake db:setup
-  - bundle exec rake gems:install
-  - bundle exec rake db:test:prepare
-  - bundle exec rake test
+- bundle exec rake db:drop:all
+- bundle exec rake db:create
+- bundle exec rake db:migrate
+- bundle exec rake db:setup
+- bundle exec rake gems:install
+- bundle exec rake db:test:prepare
+- bundle exec rake test
 cache: bundler
 notifications:
   email:
@@ -17,3 +17,5 @@ notifications:
     on_success: change
     on_failure: always
 sudo: false
+  global:
+    secure: HhkQDbg0UfonJ16ppa+CEsUUP6jg4oWPIh4Q81bLpb6RNLsnYvAkslP7O9ls8Y9zMpR8ZqdsG8bvZZSio1UOera8GnIxQxRQF8VN2OyO1/qwUAe02Zie4A2Xm27e2Swbue1efgFNdFAaanjfBiiEwR9HhF574Vrr4Qom+goxlyk=
