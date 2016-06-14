@@ -17,5 +17,6 @@ notifications:
     on_success: change
     on_failure: always
 sudo: false
+env:
   global:
-    secure: HhkQDbg0UfonJ16ppa+CEsUUP6jg4oWPIh4Q81bLpb6RNLsnYvAkslP7O9ls8Y9zMpR8ZqdsG8bvZZSio1UOera8GnIxQxRQF8VN2OyO1/qwUAe02Zie4A2Xm27e2Swbue1efgFNdFAaanjfBiiEwR9HhF574Vrr4Qom+goxlyk=
+    secure: CE7wqsqMbv67A4k8/uHTmc7B4w7Z3c4v6LJehJ1atwKimd4BqJ8D363bDa8tUNCKGkva2xIiID9/kxe5PVfCGw5HpJJhxLsRLjgQPWNPK4uncWEk8BTS7G1GyV2396glvDomtQsybkvGTlBnsMt2JMN84c22vlgvyeryWydpGKk=
