@@ -20,7 +20,7 @@ GEM
     i18n (0.7.0)
     iconv (1.0.4)
     iniparse (1.4.2)
-    overcommit (0.35.0)
+    overcommit (0.36.0)
       childprocess (~> 0.5.8)
       iniparse (~> 1.4)
     rack (1.1.6)
