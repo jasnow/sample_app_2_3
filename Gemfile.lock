@@ -37,7 +37,7 @@ GEM
       rspec-core (~> 3.5.0)
       rspec-expectations (~> 3.5.0)
       rspec-mocks (~> 3.5.0)
-    rspec-core (3.5.3)
+    rspec-core (3.5.4)
       rspec-support (~> 3.5.0)
     rspec-expectations (3.5.0)
       diff-lcs (>= 1.2.0, < 2.0)
@@ -64,4 +64,4 @@ DEPENDENCIES
   will_paginate (= 2.3.16)
 
 BUNDLED WITH
-   1.13.1
+   1.13.2
