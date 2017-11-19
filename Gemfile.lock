@@ -60,7 +60,6 @@ DEPENDENCIES
   overcommit
   rails (= 2.3.18)
   rails-footnotes
-  rake
   rspec
   sqlite3
   will_paginate (= 2.3.16)
