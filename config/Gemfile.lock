@@ -19,7 +19,7 @@ GEM
       rake (>= 0.8, < 13.0)
     i18n (1.5.2)
       concurrent-ruby (~> 1.0)
-    iconv (1.0.6)
+    iconv (1.0.7)
     rack (1.1.6)
     rails (2.3.18)
       actionmailer (= 2.3.18)
