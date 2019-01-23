@@ -1,16 +1,14 @@
 source 'https://rubygems.org'
 
-gem 'rake'
-#, '0.9.6'
+gem 'rails', '2.3.18', require: nil
 
-gem 'rails', '~> 2.3.18', :require => nil
-
-gem 'sqlite3', :require => 'sqlite3'
-
-gem 'will_paginate', '2.3.16' # Don't use '3.x.x'
+gem 'sqlite3', require: 'sqlite3'
+gem 'will_paginate', '2.3.16' # Don't use '3.x.x' # LOCKED DOWN
 gem 'iconv'
 gem 'faker'
 gem 'i18n'
+
+gem 'rake'
 
 group :development do
   gem 'rails-footnotes'
@@ -18,7 +16,7 @@ end
 
 group :test do
   gem 'rspec'
-  gem 'test-unit', '1.2.3'
+  gem 'test-unit'
 end
 
 ######################################################################
