@@ -43,7 +43,7 @@ GEM
       rspec-support (~> 3.8.0)
     rspec-support (3.8.0)
     sqlite3 (1.4.1)
-    test-unit (3.3.2)
+    test-unit (3.3.3)
       power_assert
     will_paginate (2.3.16)
 
