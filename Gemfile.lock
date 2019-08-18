@@ -21,7 +21,7 @@ GEM
       concurrent-ruby (~> 1.0)
     iconv (1.0.8)
     iniparse (1.4.4)
-    overcommit (0.49.0)
+    overcommit (0.49.1)
       childprocess (>= 0.6.3, < 2.0)
       iniparse (~> 1.4)
     rack (1.1.6)
