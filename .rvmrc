@@ -1,1 +1,1 @@
-rvm use 2.4.6@ruby2.4-rails2.3 --create
+rvm use 2.4.7@ruby2.4-rails2.3 --create
