@@ -8,10 +8,6 @@ gem 'iconv'
 gem 'faker'
 gem 'overcommit'
 
-group :development do
-  gem 'rails-footnotes'
-end
-
 group :test do
   gem 'rspec'
 end
