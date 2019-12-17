@@ -1,8 +1,8 @@
 language: ruby
 rvm:
 - 2.4.9
-before_install:
-- gem update --system
+## before_install:
+## - gem update --system
 before_script:
 - bundle exec rake db:drop:all
 - bundle exec rake db:create
