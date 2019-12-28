@@ -67,10 +67,6 @@ module Rails
     end
 
     class << self
-      def rubygems_version
-        Gem::RubyGemsVersion rescue nil
-      end
-
       def gem_version
         if defined? RAILS_GEM_VERSION
           RAILS_GEM_VERSION
@@ -84,7 +80,7 @@ module Rails
       def load_rubygems
         min_version = '1.3.2'
         require 'rubygems'
-        unless rubygems_version >= min_version
+        unless system("gem --version").to_s  >= min_version
           $stderr.puts %Q(Rails requires RubyGems >= #{min_version} (you have #{rubygems_version}). Please `gem update --system` and try again.)
           exit 1
         end
