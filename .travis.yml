@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-- 2.4.9
+- 2.4.10
 before_script:
 - bundle exec rake db:drop:all
 - bundle exec rake db:create
